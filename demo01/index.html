@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十七冰淇淋 | Josie</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>本網站使用 Cookie 以提升您的使用體驗、分析網站流量並協助行銷活動。繼續使用本網站即表示您同意我們的 <a href="#">隱私政策</a>。</p>
+    <div class="cookie-buttons">
+      <button class="btn-cookie-settings" onclick="closeCookieBanner()">自訂設定</button>
+      <button class="btn-cookie-reject" onclick="closeCookieBanner()">拒絕全部</button>
+      <button class="btn-cookie-accept" onclick="closeCookieBanner()">接受全部</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-logo">
+        <a href="#">
+          <img src="images/glico-logo.svg" alt="Glico" class="glico-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span class="glico-text" style="display:none;">Glico</span>
+        </a>
+      </div>
+      <div class="header-social">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 5.892zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <button class="menu-toggle" id="menu-toggle" aria-label="選單">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-logo">
+        <a href="#"><img src="images/seventeen-ice-logo.svg" alt="seventeen ice" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"><span class="nav-logo-text" style="display:none;">seventeen ice</span></a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#" class="nav-link active">17冰淇淋首頁</a></li>
+        <li><a href="#products" class="nav-link">商品</a></li>
+        <li><a href="#map" class="nav-link">17冰淇淋地圖</a></li>
+        <li><a href="#about" class="nav-link">關於17冰淇淋</a></li>
+        <li><a href="#spot" class="nav-link">17冰淇淋景點</a></li>
+        <li><a href="#campaign" class="nav-link">活動</a></li>
+        <li><a href="#movie" class="nav-link">影片</a></li>
+        <li><a href="#news" class="nav-link">最新消息</a></li>
+        <li><a href="#app" class="nav-link">應用程式</a></li>
+      </ul>
+      <div class="nav-badge">17</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-slider" id="hero-slider">
+      <div class="hero-slide active">
+        <a href="#map">
+          <div class="hero-slide-content">
+            <img src="images/hero-main.png" alt="十七冰淇淋 自動販賣機位置輕鬆搜尋！大家的十七冰地圖" class="hero-image">
+            <div class="hero-text-overlay">
+              <p class="hero-slide-text">十七冰淇淋自動販賣機位置輕鬆搜尋！<br>大家的十七冰地圖</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- App Floating Button -->
+    <div class="app-float-btn">
+      <a href="#app">
+        <div class="app-float-icon">
+          <span class="app-float-number">i7</span>
+          <small>seventeen ice</small>
+        </div>
+        <p>應用程式<br>詳情請點此</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="content-section section-products" id="products">
+    <div class="section-inner section-split">
+      <div class="section-image">
+        <img src="images/products-banner.png" alt="商品陣容">
+      </div>
+      <div class="section-text">
+        <div class="section-label">PRODUCTS</div>
+        <h2 class="section-title">商品陣容</h2>
+        <p class="section-desc">從經典商品到新品，<br>豐富多樣的<br>十七冰淇淋等您探索！</p>
+        <a href="#" class="section-btn">查看商品陣容</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="content-section section-about" id="about">
+    <div class="section-inner section-split reverse">
+      <div class="section-text">
+        <div class="section-label">ABOUT 17 ICE</div>
+        <h2 class="section-title">關於17冰淇淋</h2>
+        <p class="section-desc">十七冰淇淋背後隱藏的秘密是什麼？<br>為什麼要用自動販賣機販售？<br>一起來趣味地了解各種起源！</p>
+        <a href="#" class="section-btn">了解17冰淇淋</a>
+      </div>
+      <div class="section-image">
+        <img src="images/about-banner.png" alt="關於17冰淇淋">
+      </div>
+    </div>
+  </section>
+
+  <!-- Spot Section -->
+  <section class="content-section section-spot" id="spot">
+    <div class="section-inner section-split">
+      <div class="section-image">
+        <img src="images/spot-banner.png" alt="17冰淇淋景點">
+      </div>
+      <div class="section-text">
+        <div class="section-label">17冰淇淋景點</div>
+        <h2 class="section-title">17冰淇淋景點</h2>
+        <p class="section-desc">十七冰淇淋在哪裡可以吃到？<br>介紹設置景點，<br>以及各種享用方式！</p>
+        <a href="#" class="section-btn">查看17冰淇淋景點</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="content-section section-map" id="map">
+    <div class="section-inner section-split reverse">
+      <div class="section-text">
+        <div class="section-label">17冰淇淋地圖</div>
+        <h2 class="section-title">17冰淇淋地圖</h2>
+        <p class="section-desc">附近的十七冰淇淋在哪裡？<br>從您所在位置搜尋<br>十七冰淇淋的設置地點！</p>
+        <a href="#" class="section-btn">前往17冰淇淋地圖</a>
+      </div>
+      <div class="section-image">
+        <img src="images/map-banner.png" alt="17冰淇淋地圖">
+      </div>
+    </div>
+  </section>
+
+  <!-- App Section -->
+  <section class="content-section section-app" id="app">
+    <div class="section-inner section-split">
+      <div class="section-image">
+        <img src="images/app-banner.png" alt="17冰淇淋應用程式">
+      </div>
+      <div class="section-text">
+        <div class="section-label">17冰淇淋應用程式</div>
+        <h2 class="section-title">17冰淇淋應用程式</h2>
+        <p class="section-desc">十七冰淇淋的 APP 登場！<br>購買後累積里程！<br>累積的里程可用於<br>活動報名等用途。</p>
+        <div class="app-notice">
+          <p class="app-notice-title">致所有已下載 17冰淇淋應用程式的用戶</p>
+          <p>提升 QR Code 掃描速度的新版本已發布。<br>請開啟 App Store 進行更新。</p>
+        </div>
+        <a href="#" class="section-btn">查看17冰淇淋應用程式詳情</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Section -->
+  <section class="content-section section-campaign" id="campaign">
+    <div class="section-header">
+      <div class="section-label">CAMPAIGN</div>
+      <h2 class="section-title">活動</h2>
+    </div>
+    <div class="campaign-slider" id="campaign-slider">
+      <div class="campaign-track" id="campaign-track">
+        <div class="campaign-item">
+          <a href="#">
+            <img src="images/campaign1.png" alt="十七冰淇淋活動 1">
+          </a>
+        </div>
+        <div class="campaign-item">
+          <a href="#">
+            <img src="images/campaign2.png" alt="原創折疊椅贈品活動">
+          </a>
+        </div>
+        <div class="campaign-item">
+          <a href="#">
+            <img src="images/campaign3.png" alt="購買十七冰淇淋累積里程活動">
+          </a>
+        </div>
+        <div class="campaign-item">
+          <a href="#">
+            <img src="images/campaign-banner.png" alt="夏季活動">
+          </a>
+        </div>
+      </div>
+      <button class="campaign-prev" id="campaign-prev" aria-label="上一個">&#10094;</button>
+      <button class="campaign-next" id="campaign-next" aria-label="下一個">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Follow Section -->
+  <section class="section-follow" id="follow">
+    <div class="follow-header">
+      <a href="#" class="follow-instagram-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="follow-instagram-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>#十七冰淇淋</span>
+      </a>
+    </div>
+    <div class="follow-grid">
+      <div class="follow-item"><img src="images/instagram1.jpg" alt="Instagram 1"></div>
+      <div class="follow-item"><img src="images/instagram2.jpg" alt="Instagram 2"></div>
+      <div class="follow-item"><img src="images/instagram3.jpg" alt="Instagram 3"></div>
+      <div class="follow-item"><img src="images/instagram4.jpg" alt="Instagram 4"></div>
+      <div class="follow-item"><img src="images/instagram5.jpg" alt="Instagram 5"></div>
+    </div>
+  </section>
+
+  <!-- Follow CTA -->
+  <section class="section-follow-cta">
+    <div class="follow-cta-inner">
+      <div class="follow-cta-logo">
+        <span class="seventeen-ice-text">seventeen ice</span>
+      </div>
+      <p class="follow-cta-desc">滿載精彩照片，還能獲取最新資訊！<br>追蹤十七冰淇淋的官方帳號吧！</p>
+      <div class="follow-cta-label">FOLLOW 17 ICE</div>
+      <div class="follow-social-links">
+        <p class="follow-share-label">SHARE!</p>
+        <a href="#" class="follow-social-btn twitter" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 5.892zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="follow-social-btn facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="ice-cream-parade">
+      <div class="ice-cream-parade-track" id="parade-track">
+        <img src="images/products-banner.png" alt="冰淇淋商品" class="parade-image">
+        <img src="images/products-banner.png" alt="冰淇淋商品" class="parade-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="#" class="footer-nav-link active">17冰淇淋首頁</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#products" class="footer-nav-link">商品</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#map" class="footer-nav-link">17冰淇淋地圖</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#about" class="footer-nav-link">關於17冰淇淋</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#spot" class="footer-nav-link">17冰淇淋景點</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#campaign" class="footer-nav-link">活動</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#movie" class="footer-nav-link">影片</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#news" class="footer-nav-link">最新消息</a>
+      <span class="footer-nav-sep">|</span>
+      <a href="#app" class="footer-nav-link">應用程式</a>
+    </nav>
+
+    <div class="footer-brand-sites">
+      <div class="footer-brand-label">
+        <img src="images/glico-logo.svg" alt="Glico" class="footer-glico-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span class="footer-glico-text" style="display:none;">Glico</span>
+        <span>品牌網站</span>
+      </div>
+      <div class="footer-brand-grid">
+        <a href="#" class="footer-brand-item">Pocky</a>
+        <a href="#" class="footer-brand-item">Pretz</a>
+        <a href="#" class="footer-brand-item">Almond Peak</a>
+        <a href="#" class="footer-brand-item">Papp</a>
+        <a href="#" class="footer-brand-item">牧場之戀</a>
+        <a href="#" class="footer-brand-item">SUNAO</a>
+      </div>
+      <button class="footer-brand-more">查看更多品牌網站</button>
+    </div>
+
+    <div class="footer-social">
+      <p>獲取 Glico 最新資訊</p>
+      <div class="footer-social-icons">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 5.892zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Glico 首頁</a>
+      <a href="#">聯絡我們</a>
+      <a href="#">使用條款</a>
+      <a href="#">隱私政策</a>
+      <a href="#">社群媒體政策</a>
+      <a href="#">網站地圖</a>
+      <a href="#">Cookie 設定</a>
+    </div>
+
+    <div class="footer-copyright">
+      <p>&copy; Ezaki Glico Co., Ltd.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="回到頂部">PAGE TOP ▲</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
