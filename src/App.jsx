@@ -92,9 +92,36 @@ const PROJECTS = [
     tags: ['Three.js', 'React Three Fiber'],
     description: '可以 360 度旋轉、更換顏色的 3D 產品展示頁面，以 React Three Fiber 實現燈光與模型渲染。',
   },
+  {
+    id: 11, slug: 'zheran', name: 'Zheran',
+    url: 'https://zheran.onrender.com',
+    screenshot: '/screenshots/zheran.jpg',
+    title: '摺然 — 輕鬆折疊的設計包',
+    subtitle: 'Animation',
+    tags: ['GSAP', '視差捲動', '品牌網站'],
+    description: '採用褶皺結構的設計包品牌網站，以流暢的滾動動畫呈現產品細節，融合繁中排版美感與動態視差效果，打造沉浸式品牌體驗。',
+  },
+  {
+    id: 12, slug: 'sharkbay', name: 'SharkbaySalt',
+    url: 'https://sharkbay-salt.onrender.com',
+    screenshot: '/screenshots/sharkbay.jpg',
+    title: 'THE SHARKBAY SALT — 鯊魚灣海鹽',
+    subtitle: 'Animation',
+    tags: ['全螢幕動畫', '品牌視覺', '電商網站'],
+    description: '澳洲鯊魚灣天然海鹽的品牌網站，以精緻的視覺動畫與全螢幕影像呈現，傳遞產品的自然純粹感。',
+  },
+  {
+    id: 13, slug: 'jcuniverse', name: 'JCUniverse',
+    url: 'https://jc-universe.onrender.com/',
+    screenshot: '/screenshots/jcuniverse.jpg',
+    title: 'JC. universe — 人力資本網站',
+    subtitle: 'Animation',
+    tags: ['捲動動畫', '沉浸式設計', '品牌網站'],
+    description: '以宇宙為概念的人力資本品牌網站，結合滾動動畫與沉浸式視覺設計，探索人才個性與企業文化的無限可能。',
+  },
 ]
 
-const FILTERS = ['All', 'AI Systems', 'Real-time', 'Web Apps', 'Data & Visualization']
+const FILTERS = ['All', 'AI Systems', 'Real-time', 'Web Apps', 'Data & Visualization', 'Animation']
 
 function useTypewriter(text, speed = 58, delay = 300) {
   const [out, setOut] = useState('')
