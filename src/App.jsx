@@ -303,7 +303,7 @@ function ContactSection() {
             <div className="contact-card-label">{c.lineLabel}</div>
             <div className="contact-card-value">@176uoxez</div>
             <div className="contact-card-hint">{c.lineHint}</div>
-            <img src="/line-qr.png" alt="LINE QR Code" className="contact-qr" />
+            <img src="line-qr.png" alt="LINE QR Code" className="contact-qr" />
           </a>
         </div>
       </div>
