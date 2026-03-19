@@ -2,7 +2,7 @@ export const PROJECTS_DATA = [
   {
     id: 1, slug: 'ai', name: 'AIAssistant',
     url: 'https://aiassistant-m1qo.onrender.com',
-    screenshot: '/screenshots/aiassistant.jpg',
+    screenshot: 'screenshots/aiassistant.jpg',
     subtitle: 'AI Systems',
     tags: ['OpenAI', 'RAG', 'Streaming UI'],
     zh: {
@@ -17,7 +17,7 @@ export const PROJECTS_DATA = [
   {
     id: 2, slug: 'flow', name: 'FlowBoard',
     url: 'https://flowboard-ovpt.onrender.com',
-    screenshot: '/screenshots/flowboard.jpg',
+    screenshot: 'screenshots/flowboard.jpg',
     subtitle: 'Real-time',
     tags: ['WebSockets', 'Zustand'],
     zh: {
@@ -32,7 +32,7 @@ export const PROJECTS_DATA = [
   {
     id: 3, slug: 'crypto', name: 'CryptoLens',
     url: 'https://cryptolens-9wms.onrender.com',
-    screenshot: '/screenshots/cryptolens.jpg',
+    screenshot: 'screenshots/cryptolens.jpg',
     subtitle: 'Data & Visualization',
     tags: ['D3.js', 'Recharts'],
     zh: {
@@ -47,7 +47,7 @@ export const PROJECTS_DATA = [
   {
     id: 4, slug: 'pageforge', name: 'PageForge',
     url: 'https://pageforge-jiz8.onrender.com',
-    screenshot: '/screenshots/pageforge.jpg',
+    screenshot: 'screenshots/pageforge.jpg',
     subtitle: 'Web Apps',
     tags: ['dnd-kit', 'JSON'],
     zh: {
@@ -62,7 +62,7 @@ export const PROJECTS_DATA = [
   {
     id: 5, slug: 'swift', name: 'SwiftCart',
     url: 'https://swiftcart-zyoe.onrender.com',
-    screenshot: '/screenshots/swiftcart.jpg',
+    screenshot: 'screenshots/swiftcart.jpg',
     subtitle: 'Web Apps',
     tags: ['Next.js', 'PWA', 'Lighthouse'],
     zh: {
@@ -77,7 +77,7 @@ export const PROJECTS_DATA = [
   {
     id: 6, slug: 'saas', name: 'SaaSControl',
     url: 'https://saascontrol.onrender.com',
-    screenshot: '/screenshots/saascontrol.jpg',
+    screenshot: 'screenshots/saascontrol.jpg',
     subtitle: 'Web Apps',
     tags: ['NextAuth.js', 'Stripe', 'RBAC'],
     zh: {
@@ -92,7 +92,7 @@ export const PROJECTS_DATA = [
   {
     id: 7, slug: 'ink', name: 'InkPress',
     url: 'https://inkpress-n8yf.onrender.com',
-    screenshot: '/screenshots/inkpress.jpg',
+    screenshot: 'screenshots/inkpress.jpg',
     subtitle: 'Web Apps',
     tags: ['Headless CMS', 'ISR', 'SEO'],
     zh: {
@@ -107,7 +107,7 @@ export const PROJECTS_DATA = [
   {
     id: 8, slug: 'pixel', name: 'PixelCraft',
     url: 'https://pixelcraft-hp9e.onrender.com',
-    screenshot: '/screenshots/pixelcraft.jpg',
+    screenshot: 'screenshots/pixelcraft.jpg',
     subtitle: 'Web Apps',
     tags: ['Canvas API', 'WebAssembly'],
     zh: {
@@ -122,7 +122,7 @@ export const PROJECTS_DATA = [
   {
     id: 9, slug: 'note', name: 'NoteVault',
     url: 'https://notevault-2nlu.onrender.com',
-    screenshot: '/screenshots/notevault.jpg',
+    screenshot: 'screenshots/notevault.jpg',
     subtitle: 'Web Apps',
     tags: ['IndexedDB', 'CRDT', 'Offline'],
     zh: {
@@ -137,7 +137,7 @@ export const PROJECTS_DATA = [
   {
     id: 10, slug: 'orbit', name: 'ProductOrbit',
     url: 'https://productorbit.onrender.com',
-    screenshot: '/screenshots/productorbit.jpg',
+    screenshot: 'screenshots/productorbit.jpg',
     subtitle: 'Web Apps',
     tags: ['Three.js', 'React Three Fiber'],
     zh: {
@@ -152,7 +152,7 @@ export const PROJECTS_DATA = [
   {
     id: 11, slug: 'zheran', name: 'Zheran',
     url: 'https://zheran.onrender.com',
-    screenshot: '/screenshots/zheran.jpg',
+    screenshot: 'screenshots/zheran.jpg',
     subtitle: 'Animation',
     tags: ['GSAP', 'Parallax', 'Brand Site'],
     zh: {
@@ -167,7 +167,7 @@ export const PROJECTS_DATA = [
   {
     id: 12, slug: 'sharkbay', name: 'SharkbaySalt',
     url: 'https://sharkbay-salt.onrender.com',
-    screenshot: '/screenshots/sharkbay.jpg',
+    screenshot: 'screenshots/sharkbay.jpg',
     subtitle: 'Animation',
     tags: ['Full-Screen Video', 'Brand Visual', 'E-Commerce'],
     zh: {
@@ -182,7 +182,7 @@ export const PROJECTS_DATA = [
   {
     id: 13, slug: 'jcuniverse', name: 'JCUniverse',
     url: 'https://jc-universe.onrender.com/',
-    screenshot: '/screenshots/jcuniverse.jpg',
+    screenshot: 'screenshots/jcuniverse.jpg',
     subtitle: 'Animation',
     tags: ['Scroll Animation', 'Immersive Design', 'Brand Site'],
     zh: {
