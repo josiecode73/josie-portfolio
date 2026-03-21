@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect, useCallback, createContext, useContext } from 'react'
+import { useState, useRef, useEffect, useCallback, useContext } from 'react'
 import { PROJECTS_DATA, FILTERS, UI } from './i18n'
+import { LangContext } from './LangContext'
 import './App.css'
-
-export const LangContext = createContext('zh')
 
 function useTypewriter(text, speed = 58, delay = 300) {
   const [out, setOut] = useState('')
