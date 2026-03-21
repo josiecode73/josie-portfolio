@@ -4,6 +4,7 @@ export const PROJECTS_DATA = [
     url: 'https://aiassistant-m1qo.onrender.com',
     screenshot: 'screenshots/aiassistant.jpg',
     subtitle: 'AI Systems',
+    featured: true,
     tags: ['OpenAI', 'RAG', 'Streaming UI'],
     zh: {
       title: 'AI 智能客服／助手整合平台',
@@ -184,6 +185,7 @@ export const PROJECTS_DATA = [
     url: 'https://jc-universe.onrender.com/',
     screenshot: 'screenshots/jcuniverse.jpg',
     subtitle: 'Animation',
+    featured: true,
     tags: ['Scroll Animation', 'Immersive Design', 'Brand Site'],
     zh: {
       title: 'JC. universe — 人力資本網站',
@@ -203,9 +205,9 @@ export const UI = {
     nav: { portfolio: '作品集', contact: '聯絡我' },
     hero: {
       eyebrow: 'FULL-STACK DEVELOPER · BUILD REAL PRODUCTS',
-      line1: '打造真正能上線',
-      line2: '的產品',
-      subtitle: '專注把產品真的做出來，而不是只停在畫面。',
+      line1: 'Josie',
+      line2: 'Frontend Development',
+      subtitle: 'Turning complex ideas into intuitive user interfaces.',
       cta1: '實際案例',
       cta2: '聯絡合作',
       scroll: 'scroll ↓',
@@ -232,8 +234,8 @@ export const UI = {
     nav: { portfolio: 'Portfolio', contact: 'Contact' },
     hero: {
       eyebrow: 'FULL-STACK DEVELOPER · BUILD REAL PRODUCTS',
-      line1: 'Build Products That',
-      line2: 'Actually Ship',
+      line1: 'Josie',
+      line2: 'Frontend Development',
       subtitle: 'Focused on shipping real products, not just mockups.',
       cta1: 'View Projects',
       cta2: "Let's Collaborate",

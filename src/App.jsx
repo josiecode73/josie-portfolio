@@ -127,15 +127,15 @@ function ParticleCanvas() {
           const d = Math.sqrt(dx * dx + dy * dy)
           if (d < CONN) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(0,0,0,${(1 - d / CONN) * 0.14})`
-            ctx.lineWidth = 0.8
+            ctx.strokeStyle = `rgba(0,0,0,${(1 - d / CONN) * 0.28})`
+            ctx.lineWidth = 1.2
             ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke()
           }
         }
       }
       for (const p of particles.current) {
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fill()
+        ctx.fillStyle = 'rgba(0,0,0,0.32)'; ctx.fill()
       }
       rafRef.current = requestAnimationFrame(draw)
     }
@@ -201,7 +201,6 @@ function Hero() {
     <section className="hero hero--center">
       <ParticleCanvas />
       <div className="hero-center">
-        <div className="hero-eyebrow">{h.eyebrow}</div>
         <h1 className="hero-title">
           <div className="hero-title-line">
             {t1}{!d1 && <span className="tw-cursor" />}
@@ -227,19 +226,44 @@ function Hero() {
 
 function ProjectCard({ project, index }) {
   const lang = useContext(LangContext)
-  const { ref, visible } = useFadeIn()
+  const { ref: fadeRef, visible } = useFadeIn()
+  const cardRef = useRef(null)
   const overlay = UI[lang].projects.overlay
   const title = project[lang].title
   const description = project[lang].description
 
+  const handleMouseMove = useCallback((e) => {
+    const card = cardRef.current
+    if (!card) return
+    const rect = card.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    card.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-5px)`
+    card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease'
+  }, [])
+
+  const handleMouseLeave = useCallback(() => {
+    const card = cardRef.current
+    if (!card) return
+    card.style.transform = ''
+    card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease'
+  }, [])
+
+  const setRefs = useCallback((el) => {
+    fadeRef.current = el
+    cardRef.current = el
+  }, [fadeRef])
+
   return (
     <div
-      ref={ref}
-      className={`pcard fade-in${visible ? ' visible' : ''}`}
+      ref={setRefs}
+      className={`pcard${project.featured ? ' pcard--featured' : ''} fade-in${visible ? ' visible' : ''}`}
       style={{ transitionDelay: `${Math.min(index * 0.07, 0.45)}s` }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
     >
       <a href={project.url} target="_blank" rel="noopener noreferrer" className="pcard-shot">
-        <MiniFrame src={project.screenshot} alt={project.name} />
+        <img src={project.screenshot} alt={project.name} loading="lazy" />
         <div className="pcard-shot-overlay"><span>{overlay}</span></div>
       </a>
       <div className="pcard-body">
@@ -366,7 +390,7 @@ function App() {
         <ContactSection />
       </div>
       <footer className="footer">
-        <span style={{ color: '#555552', fontSize: 12 }}>{UI[lang].footer}</span>
+        <span style={{ color: 'rgba(255,255,255,.35)', fontSize: 12 }}>{UI[lang].footer}</span>
       </footer>
     </LangContext.Provider>
   )
