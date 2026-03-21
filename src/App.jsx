@@ -262,7 +262,7 @@ function ProjectCard({ project, index }) {
       onMouseLeave={handleMouseLeave}
     >
       <a href={project.url} target="_blank" rel="noopener noreferrer" className="pcard-shot">
-        <img src={project.screenshot} alt={project.name} loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}${project.screenshot}`} alt={project.name} loading="lazy" />
         <div className="pcard-shot-overlay"><span>{overlay}</span></div>
       </a>
       <div className="pcard-body">
@@ -326,7 +326,7 @@ function ContactSection() {
             <div className="contact-card-label">{c.lineLabel}</div>
             <div className="contact-card-value">@176uoxez</div>
             <div className="contact-card-hint">{c.lineHint}</div>
-            <img src="line-qr.png" alt="LINE QR Code" className="contact-qr" />
+            <img src={`${import.meta.env.BASE_URL}line-qr.png`} alt="LINE QR Code" className="contact-qr" />
           </a>
         </div>
       </div>
