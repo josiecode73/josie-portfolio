@@ -218,7 +218,7 @@ export const UI = {
     },
     contact: {
       eyebrow: 'Get in touch',
-      title: ['「實際產品」', '最佳', '解決方案'],
+      title: ['「網站平台」', '最佳', '解決方案'],
       sub: '有想法，我可以幫你把它做出來。',
       cta: '傳訊息給我 →',
       emailLabel: 'EMAIL',
@@ -247,7 +247,7 @@ export const UI = {
     },
     contact: {
       eyebrow: 'Get in touch',
-      title: ['"Real Products"', 'Best', 'Solutions'],
+      title: ['"Web Platforms"', 'Best', 'Solutions'],
       sub: 'Have an idea? I can help you build it.',
       cta: 'Message Me →',
       emailLabel: 'EMAIL',
